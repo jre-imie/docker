@@ -9,33 +9,33 @@ docker -v
 
 # TP découverte
 
-Lancer votre premier conteneur
 ```
+# Lancer votre premier conteneur
 docker run hello-world
 ```
 
-Lister les images
 ```
+# Lister les images
 docker images 
 ```
 
-Lister les process docker actifs (conteneur)
 ```
+# Lister les process docker actifs (conteneur)
 docker ps 
 ```
 
-Lister tous les process docker
 ```
+# Lister tous les process docker
 docker ps -a
 ```
 
-Lancer votre deuxième conteneur
 ```
+# Lancer votre deuxième conteneur
 docker run ubuntu:latest /bin/echo 'Hello World!'
 ```
 
-Rentrer en mode intéractif
 ```
+# Rentrer en mode intéractif
 docker run -it ubuntu:latest /bin/bash
 ```
 --> vous êtes sous ubuntu!
@@ -73,6 +73,9 @@ docker run -d --rm --name php-app -p 8081:80 php-image
 * --name indique le nom que l'on souhaite donner au conteneur. chaque conteneur doit avoir un nom unique.
 * -p 8081:80 indique qu'une requête lancée sur le port 8081 de la machine hôte sera redirigée vers le port 80 du conteneur docker.
 
+
+se rendre sur localhost:8080
+> attention, avec la toolbox l'ip n'est pas locahost. Faire un `docker-machine ip` pour connaitre la bonne ip.
 
 ## TP Docker-Compose  
  ### créer un service REST (api) avec les outils de votre choix
