@@ -1,5 +1,38 @@
 # docker
 
+## TP découverte
+
+Lancer votre premier conteneur
+```
+docker run hello-world
+```
+
+Lister les images
+```
+docker images 
+```
+
+Lister les process docker actifs (conteneur)
+```
+docker ps 
+```
+
+Lister tous les process docker
+```
+docker ps -a
+```
+
+Lancer votre deuxième conteneur
+```
+docker run ubuntu:latest /bin/echo 'Hello World!'
+```
+
+Rentrer en mode intéractif
+```
+docker run -t -i ubuntu:latest /bin/bash
+```
+--> vous êtes sous ubuntu!
+
 ## TP rest  
  ### créer un service REST (api) avec les outils de votre choix
  Le service doit exposer au moins une URL et répondre au format text ou JSON
