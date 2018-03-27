@@ -1,6 +1,13 @@
-# docker
+# Installation
 
-## TP découverte
+[guide d'installation docker](https://www.docker.com/community-edition)
+
+```
+docker -v
+> Docker version 17.12.0-ce, build c97c6d6
+```
+
+# TP découverte
 
 Lancer votre premier conteneur
 ```
@@ -33,7 +40,15 @@ docker run -t -i ubuntu:latest /bin/bash
 ```
 --> vous êtes sous ubuntu!
 
-## TP rest  
+# Dockerfile
+## TP 1
+créer un fichier nommé ''Dockerfile'' contenant les lignes suivantes:
+```
+
+```
+
+
+## TP Docker-Compose  
  ### créer un service REST (api) avec les outils de votre choix
  Le service doit exposer au moins une URL et répondre au format text ou JSON
  
