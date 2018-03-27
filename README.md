@@ -36,16 +36,42 @@ docker run ubuntu:latest /bin/echo 'Hello World!'
 
 Rentrer en mode intéractif
 ```
-docker run -t -i ubuntu:latest /bin/bash
+docker run -it ubuntu:latest /bin/bash
 ```
 --> vous êtes sous ubuntu!
 
 # Dockerfile
-## TP 1
-créer un fichier nommé ''Dockerfile'' contenant les lignes suivantes:
+## TP 1 : PHP
+Nous allons ici déployer un site php dans un conteneur docker.
+
+Dans un répertoire de travail, docker-tp1 par exemple, créer un fichier nommé ''Dockerfile'' contenant les lignes suivantes:
+```
+FROM php:7.2-apache
+COPY ./myapp /var/www/html/
 ```
 
+Créer également un fichier index.php situer dans le répertoire ./myapp
+L'arborscence obtenue est la suivante:
+
+
+| Dockerfile
+| myapp/
+       | index.php
+       
+
+construire l'image docker
 ```
+docker build -t php-image .
+```
+
+Executer le conteneur
+```
+docker run -d --rm --name php-app -p 8081:80 php-image
+```
+* -d indique que le conteneur est en mode démon.
+* --rm indique que si le conteneur est arrêté (docker stop...), alors on supprime toutes ses datas.
+* --name indique le nom que l'on souhaite donner au conteneur. chaque conteneur doit avoir un nom unique.
+* -p 8081:80 indique qu'une requête lancée sur le port 8081 de la machine hôte sera redirigée vers le port 80 du conteneur docker.
 
 
 ## TP Docker-Compose  
