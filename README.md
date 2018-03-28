@@ -40,6 +40,10 @@ docker run -it ubuntu:latest /bin/bash
 ```
 --> vous êtes sous ubuntu!
 
+```
+`# supprimer tous les conteneurs actifs / inactifs
+docker rm $(docker ps -a -q)
+```
 # Dockerfile
 ## TP 1 : PHP
 Nous allons ici déployer un site php dans un conteneur docker.
