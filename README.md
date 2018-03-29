@@ -124,11 +124,11 @@ lancer le conteneur à partir de l'image précédemment créée
 ``` 
  docker run -p 7000:8080 
 ```
-## Deuxième service REST, "showcount"
+## Créer un deuxième service REST, "showcount"
 * Créer un deuxième service REST qui expose au moins une URL.
 Lorsque l'on appel ce service, il appelle à son tour le premier service REST. Il y a donc un client REST à créer, c'est à
 dire un client capable d'appeler une URL et de récupérer le resultat.
-* Créer un dockerfile pour ce service
+* Créer un Dockerfile pour ce service
 
 ## docker-compose.yml
 
